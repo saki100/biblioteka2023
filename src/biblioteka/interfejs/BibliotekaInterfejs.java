@@ -5,8 +5,23 @@ import java.util.LinkedList;
 import biblioteka.Autor;
 import biblioteka.Knjiga;
 
-public interface BibliotekaInterfejs {
+/**
+ * Interfejs koji predstavlja Biblioteku.
+ * 
+ * @author Sara
+ *
+ */
 
+public interface BibliotekaInterfejs {
+    
+	/**
+	 * Dodaje novu knjigu u Biblioteku.
+	 * 
+	 * @param knjiga Knjiga koja se dodaje.
+	 * 
+	 * @throws java.lang.NullPointerException ako je uneta knjiga null.
+	 * @throws java.lang.RuntimeException ako uneta knjiga vec postoji u biblioteci(duplikat)
+	 */
 	public void dodajKnjigu (Knjiga knjiga);
 	public void obrisiKnjigu(Knjiga knjiga);
 	public LinkedList<Knjiga> vratiSveKnjige();
